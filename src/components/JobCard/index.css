@@ -1,0 +1,82 @@
+.company-logo {
+  height: 60px;
+}
+.job-item-container {
+  background-color: #353434;
+  padding: 25px;
+  margin: 20px;
+  border-radius: 15px;
+  list-style-type: none;
+  width: 70%;
+}
+.company-logo-role-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.company-role-details {
+  margin-left: 10px;
+}
+.company-role {
+  font-size: 25px;
+  color: #fff;
+  font-family: 'Roboto';
+}
+.rating-count {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 9px;
+}
+.company-location-package-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.company-location-details {
+  display: flex;
+  flex-direction: row;
+}
+.company-location {
+  display: flex;
+  align-items: center;
+
+  font-size: 15px;
+
+  color: #fff;
+  margin-right: 20px;
+}
+.employee-type {
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+.description-title {
+  font-family: 'Roboto';
+  font-size: 25px;
+  color: #fff;
+}
+.company-package {
+  color: #fff;
+  font-family: 'Roboto';
+  font-size: 20px;
+  font-weight: bold;
+}
+.company-description {
+  color: #fff;
+  font-size: 20px;
+  font-family: 'Roboto';
+  line-height: 30px;
+}
+.span-icon {
+  margin-right: 10px;
+}
+.link-item {
+  text-decoration: none;
+  border: none;
+}
+.hr-line {
+  color: #fff;
+}

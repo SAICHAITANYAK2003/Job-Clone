@@ -1,0 +1,119 @@
+.jobs-container {
+  background-color: #000;
+  min-height: 100vh;
+  padding: 20px;
+}
+.jobs-search-input {
+  background-color: transparent;
+  color: #ffffff;
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  flex-grow: 1;
+  padding-left: 16px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-right: 16px;
+  width: 450px;
+}
+.search-button {
+  background-color: #202020;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.search-icon {
+  color: #fff;
+  font-size: 30px;
+}
+.search-input-desktop-container {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+
+  width: 25%;
+  border: 1px solid #64748b;
+  border-radius: 5px;
+  padding: 5px;
+  margin-left: 60px;
+}
+.error-message {
+  font-family: 'Roboto';
+  font-size: 20px;
+  color: #ff0b37;
+}
+.job-content {
+  display: flex;
+  flex-direction: row;
+}
+.search-input-jobs-list-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.job-list {
+  overflow: scroll;
+  height: 100vh;
+  scrollbar-color: white grey;
+}
+.no-jobs-image {
+  height: 300px;
+}
+.no-jobs-title {
+  font-family: 'Roboto';
+  color: #fff;
+  font-size: 30px;
+  font-weight: 500;
+}
+.no-jobs-contaier {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+.no-jobs-text {
+  font-family: 'Roboto';
+  color: #fff;
+  font-size: 20px;
+}
+.jobs-error-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+.nojobs-image {
+  height: 120px;
+}
+.nojobs-title {
+  font-family: 'Roboto';
+  color: #fff;
+  font-weight: 400;
+  text-align: center;
+}
+.nojobs-text {
+  font-family: 'Roboto';
+  color: #cbd5e1;
+  font-size: 15px;
+  text-align: center;
+}
+.nojobs-button {
+  background-color: #6366f1;
+  border: none;
+  outline: none;
+  font-family: Roboto;
+  border-radius: 10px;
+  color: #fff;
+}
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}

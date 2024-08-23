@@ -1,0 +1,65 @@
+.similar-company-logo {
+  height: 50px;
+}
+.similar-job-info {
+  margin-left: 10px;
+}
+.similar-item-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #202020;
+  list-style-type: none;
+  margin-right: 20px;
+  width: 350px;
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+.similar-logo-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.description-title {
+  font-family: 'Roboto';
+  font-size: 20px;
+  color: #fff;
+}
+.similar-job-description {
+  color: #cbd5e1;
+  font-family: 'Roboto';
+  font-size: 18px;
+  line-height: 35px;
+}
+.similar-rating {
+  font-size: 20px;
+  color: #fff;
+  font-weight: bold;
+  padding: 5px;
+}
+.location-type-container {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+}
+.location-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 20px;
+}
+.type-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.location-name {
+  font-family: 'Roboto';
+  color: #fff;
+  margin-left: 10px;
+}
+.employement-type {
+  font-family: 'Roboto';
+  color: #fff;
+  margin-left: 10px;
+}

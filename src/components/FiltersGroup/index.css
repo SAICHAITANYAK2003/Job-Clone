@@ -1,0 +1,60 @@
+.employment-title {
+  font-family: 'Roboto';
+  color: #fff;
+  font-size: 20px;
+  margin-left: 0px;
+  padding-bottom: 20px;
+}
+.filter-group-container {
+  width: 30%;
+}
+.eachtype-label {
+  color: #fff;
+}
+.employment-type-container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.employment-types-list {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+.employment-item {
+  display: flex;
+  align-items: center;
+  padding: 0px;
+  padding-bottom: 20px;
+}
+.salary-range-container {
+  padding: 10px;
+}
+.salary-title {
+  font-family: 'Roboto';
+  color: #fff;
+  font-size: 20px;
+  margin-left: 0px;
+  padding-bottom: 20px;
+}
+.eachtype-label {
+  margin-left: 10px;
+}
+.check-input {
+  width: 15px;
+  height: 15px;
+}
+.salary-range-container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.salary-types-list {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+.radio-input {
+  width: 15px;
+  height: 15px;
+}

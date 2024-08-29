@@ -1,5 +1,6 @@
 import ProfileDetails from '../ProfileDetails'
 import './index.css'
+
 const FiltersGroup = props => {
   const renderTypeOfEmployement = () => {
     const {employmentTypesList} = props

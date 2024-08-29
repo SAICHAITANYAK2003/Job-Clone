@@ -25,6 +25,7 @@ class Login extends Component {
 
     history.replace('/')
   }
+
   onSubmitFailure = errorMsg => {
     this.setState({
       errorMsg,

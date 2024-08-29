@@ -16,9 +16,11 @@ class ProfileDetails extends Component {
     profileData: [],
     apiStatus: apiStatusConstants.initial,
   }
+
   componentDidMount() {
     this.getProfileDetails()
   }
+
   getProfileDetails = async () => {
     this.setState({apiStatus: apiStatusConstants.inProgress})
     const profileApiUrl = 'https://apis.ccbp.in/profile'
@@ -47,6 +49,7 @@ class ProfileDetails extends Component {
       this.setState({apiStatus: apiStatusConstants.failure})
     }
   }
+
   renderProfileView = () => {
     const {profileData} = this.state
     const {name, profileImageUrl, shortBio} = profileData
@@ -58,13 +61,14 @@ class ProfileDetails extends Component {
       </div>
     )
   }
+
   renderFailureView = () => (
     <div className="profile-error-view-container">
       <button
         type="button"
         id="button"
         className="profile-failure-button"
-        onClick={this.getProfile}
+        onClick={this.getProfileDetails}
       >
         Retry
       </button>
@@ -76,6 +80,7 @@ class ProfileDetails extends Component {
       <Loader type="ThreeDots" color="#ffffff" height="50" width="50" />
     </div>
   )
+
   render() {
     const {apiStatus} = this.state
 

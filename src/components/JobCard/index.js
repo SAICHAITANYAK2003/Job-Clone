@@ -3,6 +3,7 @@ import {FaStar} from 'react-icons/fa'
 import {MdLocationOn} from 'react-icons/md'
 import {BsBriefcaseFill} from 'react-icons/bs'
 import './index.css'
+
 const JobCard = props => {
   const {eachJobDetails} = props
   const {
@@ -26,7 +27,7 @@ const JobCard = props => {
           />
           <div className="company-role-details">
             <h1 className="company-role">{title}</h1>
-            <p>
+            <p className="rating">
               <FaStar color="#fbbf24" />
               <span className="rating-count">{rating}</span>
             </p>

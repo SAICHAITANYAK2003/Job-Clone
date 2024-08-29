@@ -16,7 +16,7 @@ const Header = props => {
     <nav className="nav-header ">
       <div className="nav-content">
         <div className="navbar-large-container">
-          <Link to='/'>
+          <Link to="/">
             <img
               src="https://assets.ccbp.in/frontend/react-js/logo-img.png "
               alt="website logo"
@@ -36,7 +36,7 @@ const Header = props => {
               </Link>
             </li>
           </ul>
-          <button className="nav-large-button" onClick={onLogOut}>
+          <button type="button" className="nav-large-button" onClick={onLogOut}>
             Logout
           </button>
         </div>
@@ -58,8 +58,13 @@ const Header = props => {
               </Link>
             </li>
           </ul>
-          <button className="nav-mobile-button">
-            <FiLogOut className="nav-mobile-icons" onClick={onLogOut} />
+          <button
+            type="button"
+            className="nav-mobile-button"
+            onClick={onLogOut}
+            aria-label="close"
+          >
+            <FiLogOut className="nav-mobile-icons" />
           </button>
         </div>
       </div>

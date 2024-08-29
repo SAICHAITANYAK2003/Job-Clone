@@ -19,7 +19,6 @@ class JobItemDetails extends Component {
   state = {
     jobData: {},
     similarJobsData: [],
-
     apiStatus: apiConstants.initial,
   }
 
@@ -27,17 +26,7 @@ class JobItemDetails extends Component {
     this.getJobsData()
   }
 
-  getFormattedData = similarData => ({
-    companyLogoUrl: similarData.company_logo_url,
-    employmentType: similarData.employment_type,
-    id: similarData.id,
-    jobDescription: similarData.job_description,
-    location: similarData.location,
-    rating: similarData.rating,
-    title: similarData.title,
-  })
-
-  getFormattedData = data => ({
+  getFormattedJobData = data => ({
     companyLogoUrl: data.company_logo_url,
     companyWebsiteUrl: data.company_website_url,
     employmentType: data.employment_type,
@@ -55,6 +44,16 @@ class JobItemDetails extends Component {
       imageUrl: eachSkill.image_url,
       name: eachSkill.name,
     })),
+  })
+
+  getFormattedSimilarData = similarData => ({
+    companyLogoUrl: similarData.company_logo_url,
+    employmentType: similarData.employment_type,
+    id: similarData.id,
+    jobDescription: similarData.job_description,
+    location: similarData.location,
+    rating: similarData.rating,
+    title: similarData.title,
   })
 
   getJobsData = async () => {
@@ -76,15 +75,14 @@ class JobItemDetails extends Component {
     if (response.ok === true) {
       const fetchedData = await response.json()
       console.log(fetchedData)
-      const updateData = this.getFormattedData(fetchedData.job_details)
+      const updateData = this.getFormattedJobData(fetchedData.job_details)
       const updatedSimilarData = fetchedData.similar_jobs.map(eachsimilarJob =>
-        this.getFormattedData(eachsimilarJob),
+        this.getFormattedSimilarData(eachsimilarJob),
       )
 
       this.setState({
         jobData: updateData,
         similarJobsData: updatedSimilarData,
-
         apiStatus: apiConstants.success,
       })
     } else {
@@ -93,31 +91,35 @@ class JobItemDetails extends Component {
       })
     }
   }
+
   renderFailureView = () => (
     <div className="jobs-error-container">
       <img
         src="https://assets.ccbp.in/frontend/react-js/failure-img.png"
         className="nojobs-image"
+        alt="failure view"
       />
-      <h1 className="nojobs-title">Oops! Something Went Wrongs</h1>
+      <h1 className="nojobs-title">Oops! Something Went Wrong</h1>
       <p className="nojobs-text">
-        we cannot seem to find the page you are looking for.
+        We cannot seem to find the page you are looking for.
       </p>
       <button
         className="nojobs-button"
         type="button"
         data-testid="button"
-        onClick={this.getJobsList}
+        onClick={this.getJobsData}
       >
         Retry
       </button>
     </div>
   )
+
   renderLoaderView = () => (
     <div className="loader-container" data-testid="loader">
       <Loader type="ThreeDots" color="#ffffff" height="60" width="60" />
     </div>
   )
+
   renderJobItemDetails = () => {
     const {jobData, similarJobsData} = this.state
     const {
@@ -132,12 +134,17 @@ class JobItemDetails extends Component {
       skills,
       lifeAtCompany,
     } = jobData
+
     return (
       <div className="job-item-details-container">
         <div className="job-item">
           <div className="job-logo-title-location-container">
             <div className="job-logo-title-container">
-              <img src={companyLogoUrl} className="job-compay-logo" />
+              <img
+                src={companyLogoUrl}
+                className="job-compay-logo"
+                alt="website logo"
+              />
               <div className="job-rating-title-container">
                 <h1 className="job-title">{title}</h1>
                 <div className="job-rating-container">
@@ -168,6 +175,7 @@ class JobItemDetails extends Component {
                   href={companyWebsiteUrl}
                   className="visit-heading"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   <p className="link-title">Visit</p>
                   <FaExternalLinkAlt color="#4f46e5" />
@@ -210,6 +218,7 @@ class JobItemDetails extends Component {
       </div>
     )
   }
+
   renderAllJobs = () => {
     const {apiStatus} = this.state
 
@@ -227,11 +236,7 @@ class JobItemDetails extends Component {
 
   render() {
     return (
-      <>
-        <div className="job-items-details-container">
-          {this.renderAllJobs()}
-        </div>
-      </>
+      <div className="job-items-details-container">{this.renderAllJobs()}</div>
     )
   }
 }

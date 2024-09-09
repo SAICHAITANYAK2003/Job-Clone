@@ -46,7 +46,7 @@ packages:
   /@babel/code-frame/7.24.7:
     dependencies:
       '@babel/highlight': 7.24.7
-      picocolors: 1.0.1
+      picocolors: 1.1.0
     engines:
       node: '>=6.9.0'
     resolution:
@@ -399,7 +399,7 @@ packages:
       '@babel/helper-validator-identifier': 7.24.7
       chalk: 2.4.2
       js-tokens: 4.0.0
-      picocolors: 1.0.1
+      picocolors: 1.1.0
     engines:
       node: '>=6.9.0'
     resolution:
@@ -11109,8 +11109,12 @@ packages:
     resolution:
       integrity: sha512-cMlDqaLEqfSaW8Z7N5Jw+lyIW869EzT73/F5lhtY9cLGoVxSXznfgfXMO0Z5K0o0Q2TkTXq+0KFsdnSe3jDViA==
   /picocolors/1.0.1:
+    dev: true
     resolution:
       integrity: sha512-anP1Z8qwhkbmu7MFP5iTt+wQKXgwzf7zTyGlcdzabySa9vd0Xt392U0rVmz9poOaBj0uHJKyyo9/upk0HrEQew==
+  /picocolors/1.1.0:
+    resolution:
+      integrity: sha512-TQ92mBOW0l3LeMeyLV6mzy/kWr8lkd/hp3mTg7wYK7zJhuBStmGMBG0BdeDZS/dZx1IukaX6Bk11zcln25o1Aw==
   /picomatch/2.3.1:
     engines:
       node: '>=8.6'
